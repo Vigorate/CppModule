@@ -6,20 +6,23 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:47:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/26 18:51:50 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:35:54 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#prama one
+#pragma one
 
-Class Contact
+#include <string>
+
+class Contact
 {
 	public:
 		Contact();
 		~Contact();
 
-		std::string	*getinfo(void) const;
-		void		setinfo(std::string *)
+		string	*getinfo(void) const;
+		void		setinfo(string *);
+
 	private:
-		std::string	info[5];
+		string	info[5];
 }

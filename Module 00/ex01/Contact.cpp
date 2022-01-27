@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:54:40 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/26 18:56:49 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:35:40 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@ Contact::Contact (void)
 	
 }
 
-~Contact::Contact (void)
+Contact::~Contact (void)
 {
 	
 }

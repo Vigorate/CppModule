@@ -6,15 +6,15 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:46:12 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/26 18:54:06 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/27 17:28:43 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#prama one
+#pragma one
 
 # include <Contact.class.hpp>
 
-Class PhoneBook
+class PhoneBook
 {
 	public:	
 		PhoneBook();
