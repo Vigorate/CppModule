@@ -6,11 +6,11 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:47:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/28 17:44:00 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/28 17:54:13 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma one
+#pragma once
 
 #include <iostream>
 #include <string>
