@@ -6,12 +6,13 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:47:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/27 17:35:54 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/28 17:44:00 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma one
 
+#include <iostream>
 #include <string>
 
 class Contact
@@ -20,9 +21,9 @@ class Contact
 		Contact();
 		~Contact();
 
-		string	*getinfo(void) const;
-		void		setinfo(string *);
+		std::string	getinfo(int idx);
+		void		setinfo(std::string, int);
 
 	private:
-		string	info[5];
-}
+		std::string	info[5];
+};

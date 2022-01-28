@@ -6,13 +6,13 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:46:12 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/27 17:28:43 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/28 16:49:42 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma one
 
-# include <Contact.class.hpp>
+# include "Contact.class.hpp"
 
 class PhoneBook
 {
@@ -20,11 +20,9 @@ class PhoneBook
 		PhoneBook();
 		~PhoneBook();
 
-		void	setContact(Class Contact)
-		Contact	getContact(void) const;
-		
+		void	setContact(class Contact, int idx);
+		Contact	getContact(int idx) const;
+
 	private:
-		int	idx;
-		Contact[8];
-	
+		Contact contact[8];
 };
