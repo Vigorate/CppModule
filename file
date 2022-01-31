@@ -1,0 +1,27 @@
+Notes:
+
+2 structures, one for background, one for shape
+f open on FILE *, check for valid file, never forget to close and free
+First fscanf for background, never forget \n on type str
+Draw back ground
+Loop on fscanf for every successive line, dont forget \n for correct reccuperation
+Loop for every j on heigh and every i on width is the point :
+	- Not in the square/circle
+		0
+	- A border of the square/circle
+		type c/r
+	- In the square/circle
+		type C/R
+
+	if ((r.w + r.x < x || x < r.x) || (r.y + r.h < y || y < r.y))
+		return (0);
+	if (((x - r.x < 1.00000000) || ((r.x + r.w) - x < 1.00000000)) ||
+	(y - r.y < 1.00000000 || ((r.y + r.h) - y < 1.00000000)))
+		return (2);
+	return (1);
+
+	if (sqrt((x - r.x) * (x - r.x) + (y - r.y) * (y - r.y)) > r.r)
+		return (0);
+	if (r.r - sqrt((x - r.x) * (x - r.x) + (y - r.y) * (y - r.y)) < 1.00000000)
+		return (2);
+	return (1);

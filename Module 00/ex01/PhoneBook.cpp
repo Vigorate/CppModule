@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   PhoneBook.cpp                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:43:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/28 19:42:20 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/01/31 16:59:51 by amine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -51,7 +51,7 @@ void		PhoneBook::search_instruction(int idx)
 			if (this->contact[i].getinfo(j).length < 10)
 			{
 				std::cout << this->contact[i].getinfo(j);
-				for (int k = 0; k < 10 - this->contact[i].getinfo(j).length )
+				for (int k = 0; k < 10 - this->contact[i].getinfo(j).length)
 			}
 			else
 			{
