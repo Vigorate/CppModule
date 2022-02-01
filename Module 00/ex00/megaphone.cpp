@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:16:43 by amine             #+#    #+#             */
-/*   Updated: 2022/01/26 16:17:18 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/01 17:33:46 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,7 +19,11 @@ int main(int ac, char **av)
 		std::cout << "* LOUD AND UNBEARABLE FEEDBACK NOISE *\n";
 		return 0;
 	}
-	for (int i = 0; av[1][i]; ++i)
-		av[1][i] = toupper(av[1][i]);
-	std::cout << av[1] << std::endl;
+	for (int j = 1; j < ac; ++j)
+		for (int i = 0; av[j][i]; ++i)
+			av[j][i] = toupper(av[j][i]);
+	for (int i = 1; i < ac; ++i)
+		std::cout << av[i];
+	std::cout << std::endl;
+	return (0);
 }

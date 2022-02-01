@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Contact.class.hpp                                  :+:      :+:    :+:   */
+/*   Contact.hpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/26 18:47:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/01/28 17:54:13 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/01 15:08:29 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -21,7 +21,7 @@ class Contact
 		Contact();
 		~Contact();
 
-		std::string	getinfo(int idx);
+		std::string	getinfo(int);
 		void		setinfo(std::string, int);
 
 	private:
