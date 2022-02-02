@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:43:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 13:43:43 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 15:52:17 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -22,22 +22,36 @@ PhoneBook::~PhoneBook (void)
 	
 }
 
+std::string	get_input(void)
+{
+	std::string		str;
+
+	while (1)
+	{
+		getline(std::cin, str);
+		if (str.empty())
+			std::cout << "Please enter a valid input" << std::endl;
+		else
+			return (str);
+	}
+}
+
 void		PhoneBook::add_instruction(int idx)
 {
 	std::cout << "Please enter first name : ";
-	getline(std::cin, this->line);
+	this->line = get_input();
 	this->getContact(idx)->setinfo(this->line, 0);
 	std::cout << "Please enter last name : ";
-	getline(std::cin, this->line);
+	this->line = get_input();
 	(this->getContact(idx))->setinfo(this->line, 1);
 	std::cout << "Please enter nickname : ";
-	getline(std::cin, this->line);
+	this->line = get_input();
 	(this->getContact(idx))->setinfo(this->line, 2);
 	std::cout << "Please enter phone number : ";
-	getline(std::cin, this->line);
+	this->line = get_input();
 	(this->getContact(idx))->setinfo(this->line, 3);
 	std::cout << "Please enter darkest secret : ";
-	getline(std::cin, this->line);
+	this->line = get_input();
 	(this->getContact(idx))->setinfo(this->line, 4);
 }
 
@@ -68,15 +82,15 @@ void		PhoneBook::search_instruction(int idx)
 		std::cout << std::endl;
 	}
 	std::cout << "Please enter desired contact index" << std::endl;
-	getline(std::cin, input);
+	input = get_input();
 	if (is_number(input))
 	{
 		std::cout << "You have inputed a non numeric argument" << std::endl;
 		return ;
 	}
-	std::cout << "Just inputed : " << input << std::endl;
 	if (std::cin.eof())
 		return ;
+	std::cout << "Just inputed : " << input << std::endl;
 	in_idx = std::stoi(input);
 	std::cout << "You have inputed : " << in_idx << std::endl;
 	if (in_idx >= 0 && in_idx < idx)
