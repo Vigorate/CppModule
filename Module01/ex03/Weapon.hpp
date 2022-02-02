@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:59:07 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 18:06:02 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:43:12 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,5 +24,5 @@ class Weapon
 		void			setType(std::string);
 
 	private:
-		std::string		type;
+		std::string		_type;
 };

@@ -6,15 +6,15 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:59:09 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 18:05:55 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:43:37 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Weapon.hpp"
 
-Weapon::Weapon(std::string type)
+Weapon::Weapon(std::string type) : _type(type)
 {
-	setType(type);
+
 }
 
 Weapon::~Weapon()
@@ -24,10 +24,10 @@ Weapon::~Weapon()
 
 std::string		Weapon::getType(void) const
 {
-	return (this->type);
+	return (this->_type);
 }
 
 void			Weapon::setType(std::string type)
 {
-	this->type = type;
+	this->_type = type;
 }
