@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:43:29 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/01 17:17:39 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 13:43:43 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -75,6 +75,8 @@ void		PhoneBook::search_instruction(int idx)
 		return ;
 	}
 	std::cout << "Just inputed : " << input << std::endl;
+	if (std::cin.eof())
+		return ;
 	in_idx = std::stoi(input);
 	std::cout << "You have inputed : " << in_idx << std::endl;
 	if (in_idx >= 0 && in_idx < idx)

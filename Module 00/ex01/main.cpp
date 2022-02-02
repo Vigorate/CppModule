@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/28 15:23:48 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/01 18:14:15 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 13:42:40 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,7 @@ int		main(void)
 	while (1)
 	{
 		getline(std::cin, input);
-		if (!std::cin.eof())
+		if (std::cin.eof())
 			return (1);
 		if (!input.compare(0, 4, "EXIT", 4))
 			return (0);

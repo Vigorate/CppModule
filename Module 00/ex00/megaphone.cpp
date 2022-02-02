@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/01/19 17:16:43 by amine             #+#    #+#             */
-/*   Updated: 2022/02/01 17:33:46 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 13:36:50 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,5 +25,5 @@ int main(int ac, char **av)
 	for (int i = 1; i < ac; ++i)
 		std::cout << av[i];
 	std::cout << std::endl;
-	return (0);
-}
+		return (0);
+	}
