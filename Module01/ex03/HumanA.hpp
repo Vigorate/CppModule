@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:59:05 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 19:56:24 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:10:44 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 class HumanA
 {
 	public:
-		HumanA(std::string, Weapon *);
+		HumanA(std::string, Weapon);
 		~HumanA();
 
 		void	attack();

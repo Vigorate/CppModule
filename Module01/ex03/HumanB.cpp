@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:59:11 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 18:29:35 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:07:14 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 #include <iostream>
 
-HumanB::HumanB(std::string name)
+HumanB::HumanB(std::string name) : name(name)
 {
-	this->name = name;
+
 }
 
 HumanB::~HumanB()
@@ -39,7 +39,7 @@ std::string	HumanB::getName(void) const
 	return (this->name);
 }
 
-void		setWeapon(Weapon weapon)
+void		HumanB::setWeapon(Weapon weapon)
 {
 	this->weapon = weapon;
 }

@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:59:13 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 19:56:08 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/02 20:02:54 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,10 +14,9 @@
 
 #include <iostream>
 
-HumanA::HumanA(std::string name, Weapon *weapon)
+HumanA::HumanA(std::string name, Weapon weapon) : name(name), weapon(weapon)
 {
-	this->name = name;
-	this->weapon = weapon;
+
 }
 
 HumanA::~HumanA()
