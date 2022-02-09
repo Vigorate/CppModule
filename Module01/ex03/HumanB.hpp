@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 17:59:04 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 20:30:44 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/09 14:06:15 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,7 +25,6 @@ class HumanB
 		void			setWeapon(Weapon &);
 
 	private:
-		Weapon			*_weapon;
 		std::string		_name;
-	
+		Weapon			*_weapon;
 };

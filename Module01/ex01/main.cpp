@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:00:01 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 17:28:40 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/09 14:00:02 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,11 +19,14 @@ int		main(void)
 {
 	Zombie	*zombies;
 
-	zombies = zombieHorde(10, "Henry");
+	zombies = zombieHorde(-10, "Henry");
+	if (!zombies)
+		return (1);
 	for (int i = 0; i < 10; ++i)
 	{
 		std::cout << i + 1 << " ";
-		zombies[i].annonce();
+		zombies[i].announce();
 	}
 	delete [] zombies;
+	return (0);
 }

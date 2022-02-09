@@ -1,27 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 14:00:01 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/09 13:57:41 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/06 02:24:08 by amine             #+#    #+#             */
+/*   Updated: 2022/02/09 14:58:36 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
 
+#include <string>
+#include <iostream>
 
-Zombie	*newZombie(std::string);
-void	randomChump(std::string);
-
-int		main(void)
+class Karen
 {
-	Zombie	*zombie1;
+	private:
+		void	_debug(void);
+		void	_info(void);
+		void	_warning(void);
+		void	_error(void);
+		std::string		_filter;
+	public:
+		Karen(std::string filter);
+		~Karen();
+		bool	complain(std::string level);
+};
 
-	zombie1 = newZombie("Henry");
-	zombie1->announce();
-	randomChump("Philip");
-	delete zombie1;
-}
+typedef struct	s_complain
+{
+	std::string	str;
+	void		(Karen::*f)();
+}				t_comp;

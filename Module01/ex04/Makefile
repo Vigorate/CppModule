@@ -1,19 +1,13 @@
 CC = g++
 ODIR = obj
-PROG = zombie
+PROG = ex04
 CXXFLAGS = -Wall -Wextra -std=c++98
 
-OBJS = $(ODIR)/Zombie.o $(ODIR)/ZombieHorde.o $(ODIR)/main.o 
+OBJS = $(ODIR)/main.o 
 $(PROG) : $(ODIR) $(OBJS)
 	$(CC) -o $@ $(OBJS) $(CXXFLAGS)
 
-$(ODIR)/Zombie.o : ./Zombie.cpp ./Zombie.hpp 
-	$(CC) -c ./Zombie.cpp -o $@ $(CXXFLAGS)
-
-$(ODIR)/ZombieHorde.o : ./ZombieHorde.cpp ./Zombie.hpp 
-	$(CC) -c ./ZombieHorde.cpp -o $@ $(CXXFLAGS)
-
-$(ODIR)/main.o : ./main.cpp ./Zombie.hpp 
+$(ODIR)/main.o : ./main.cpp 
 	$(CC) -c ./main.cpp -o $@ $(CXXFLAGS)
 
 $(ODIR) :

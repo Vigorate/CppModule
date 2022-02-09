@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/05 19:04:53 by amine             #+#    #+#             */
-/*   Updated: 2022/02/05 23:42:02 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/09 15:29:22 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,7 +34,8 @@ int main(int ac, char **av)
 
 	n_file_name += ".replace";
 
-	std::ofstream	ofs(n_file_name);
+	std::ofstream	ofs(n_file_name.c_str());
+
 	if (!ofs)
 	{
 		std::cout << "Could not create file" << std::endl;

@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Karen.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/06 02:24:08 by amine             #+#    #+#             */
-/*   Updated: 2022/02/06 02:43:08 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/09 14:25:38 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,14 +17,19 @@
 
 class Karen
 {
-private:
-	void	(Karen::array)();
-	void	debug(void);
-	void	info(void);
-	void	warning(void);
-	void	error(void);
-public:
-	Karen(/* args */);
-	~Karen();
-	void	complain(std::string level)
+	private:
+		void	_debug(void);
+		void	_info(void);
+		void	_warning(void);
+		void	_error(void);
+	public:
+		Karen();
+		~Karen();
+		void	complain(std::string level);
 };
+
+typedef struct	s_complain
+{
+	std::string	str;
+	void		(Karen::*f)();
+}				t_comp;

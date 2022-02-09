@@ -6,14 +6,14 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/02 14:00:11 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/02 17:12:47 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/09 13:57:41 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Zombie.hpp"
 #include <iostream>
 
-void	Zombie::annonce(void)
+void	Zombie::announce(void)
 {
 	std::cout << this->name << ": BraiiiiiiinnnzzzZ..." << std::endl;
 }

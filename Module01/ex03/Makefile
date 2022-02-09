@@ -1,7 +1,7 @@
 CC = g++
 ODIR = obj
 PROG = ex03
-CXXFLAGS = -Wall -Wextra -std=c++11
+CXXFLAGS = -Wall -Wextra -std=c++98
 
 OBJS = $(ODIR)/HumanA.o $(ODIR)/HumanB.o $(ODIR)/Weapon.o $(ODIR)/main.o 
 $(PROG) : $(ODIR) $(OBJS)

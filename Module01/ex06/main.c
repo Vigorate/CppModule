@@ -1,27 +1,30 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 14:00:01 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/09 13:57:41 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/06 02:23:19 by amine             #+#    #+#             */
+/*   Updated: 2022/02/09 15:27:22 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#include "Karen.hpp"
 
-
-Zombie	*newZombie(std::string);
-void	randomChump(std::string);
-
-int		main(void)
+int		main(int ac, char **av)
 {
-	Zombie	*zombie1;
+	if (ac == 1 || ac > 2)
+	{
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+		return (1);
+	}
 
-	zombie1 = newZombie("Henry");
-	zombie1->announce();
-	randomChump("Philip");
-	delete zombie1;
+	std::string	level = av[1];
+
+	Karen	karen(level);
+
+	if (karen.complain(level) == false)
+		std::cout << "[ Probably complaining about insignificant problems ]" << std::endl;
+
 }

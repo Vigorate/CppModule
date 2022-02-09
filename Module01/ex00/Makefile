@@ -1,7 +1,7 @@
 CC = g++
 ODIR = obj
 PROG = zombie
-CXXFLAGS = -Wall -Wextra -std=c++11
+CXXFLAGS = -Wall -Wextra -std=c++98
 
 OBJS = $(ODIR)/Zombie.o $(ODIR)/main.o $(ODIR)/newZombie.o $(ODIR)/randomChump.o 
 $(PROG) : $(ODIR) $(OBJS)
