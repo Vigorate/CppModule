@@ -1,27 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main.cpp                                           :+:      :+:    :+:   */
+/*   Fixed.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/02 14:00:01 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/09 17:49:42 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/09 20:31:52 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/09 21:03:55 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Zombie.hpp"
+#pragma once
+#include <iostream>
 
-
-Zombie	*newZombie(std::string);
-void	randomChump(std::string);
-
-int		main(void)
+class Fixed
 {
-	Zombie	*zombie1;
+	public:
 
-	zombie1 = newZombie("Henry");
-	zombie1->announce();
-	randomChump("Philip");
-	delete zombie1;
-}
+		Fixed(void);
+		Fixed(Fixed const & src);
+		~Fixed(void);
+
+		Fixed&	operator=(Fixed const & src);
+
+		int		getRawBits(void) const;
+		void	setRawBits(const int raw);
+	private :
+		int		decimal;
+		static const int n_bits = 8;
+};
+
+std::ostream	&operator<<(std::ostream &ostream, const Fixed &src);
