@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:50:36 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/15 18:16:52 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/15 19:48:17 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,6 +20,7 @@ class ClapTrap
 	public:
 		ClapTrap(void);
 		ClapTrap(std::string name);
+		ClapTrap(std::string, int, int, int);
 		ClapTrap(ClapTrap const & src);
 		~ClapTrap(void);
 
@@ -34,7 +35,7 @@ class ClapTrap
 		int				getHitPoint(void) const;
 		int				getEnergyPoint(void) const;
 
-	private :
+	protected :
 		std::string		_name;
 		int				_hitpoint;
 		int				_energypoint;
