@@ -6,13 +6,15 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:23:52 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 14:16:55 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 16:14:40 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#pragma once
+
 #include "ClapTrap.hpp"
 
-class ScavTrap : public ClapTrap
+class ScavTrap : virtual public ClapTrap
 {
 	public:
 		ScavTrap(void);
@@ -20,6 +22,10 @@ class ScavTrap : public ClapTrap
 		ScavTrap(std::string, int, int, int);
 		ScavTrap(ScavTrap const & src);
 		~ScavTrap(void);
+
+		virtual void			setAttackDamage(void);
+		virtual void			setHitPoint(void);
+		virtual void			setEnergyPoint(void);
 
 		ScavTrap&		operator=(ScavTrap const & src);
 

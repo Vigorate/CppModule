@@ -6,27 +6,37 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:23:44 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 14:24:25 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 16:15:48 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
 #include "ScavTrap.hpp"
+#include "FragTrap.hpp"
 
-ScavTrap::ScavTrap(void) : ClapTrap("Base", 100, 50, 20)
+ScavTrap::ScavTrap(void) : ClapTrap()
 {
+	ScavTrap::setHitPoint();
+	ScavTrap::setEnergyPoint();
+	ScavTrap::setAttackDamage();
 	std::cout << "Default ScavTrap constructor called" << std::endl;
 }
 
-ScavTrap::ScavTrap(std::string name) : ClapTrap(name, 100, 50, 20)
+ScavTrap::ScavTrap(std::string name)
 {
+	this->_name = name;
+	ScavTrap::setHitPoint();
+	ScavTrap::setEnergyPoint();
+	ScavTrap::setAttackDamage();
 	std::cout << "ScavTrap constructor called" << std::endl;
 }
 
-
-ScavTrap::ScavTrap(ScavTrap const & src) : ClapTrap(src)
+ScavTrap::ScavTrap(ScavTrap const & src)
 {
-	(void)src;
+	this->_name = src.getName();
+	ScavTrap::setHitPoint();
+	ScavTrap::setEnergyPoint();
+	ScavTrap::setAttackDamage();
 	std::cout << "Copy ScavTrap constructor called" << std::endl;
 }
 
@@ -47,11 +57,19 @@ ScavTrap&  ScavTrap::operator=(ScavTrap const & src)
 	return (*this);
 }
 
-std::ostream	&operator<<(std::ostream &ostream, const ScavTrap &src)
+void			ScavTrap::setHitPoint(void)
 {
-	(void)src;
-	ostream << "ScavTrap";
-	return (ostream);
+	this->_hitpoint = 100;
+}
+
+void			ScavTrap::setEnergyPoint(void)
+{
+	this->_energypoint = 50;
+}
+
+void			ScavTrap::setAttackDamage(void)
+{
+	this->_attackdamage = 20;
 }
 
 void			ScavTrap::guardGate(void)

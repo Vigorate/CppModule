@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:50:30 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 14:24:43 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 15:43:51 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -91,6 +91,26 @@ void			ClapTrap::takeDamage(unsigned int amount)
 	this->_hitpoint -= amount;
 	if (this->_hitpoint < 0)
 		this->_hitpoint = 0;
+}
+
+void			ClapTrap::setName(std::string value)
+{
+	this->_name = value;
+}
+
+void			ClapTrap::setHitPoint(void)
+{
+	this->_hitpoint = 10;
+}
+
+void			ClapTrap::setEnergyPoint(void)
+{
+	this->_energypoint = 10;
+}
+
+void			ClapTrap::setAttackDamage(void)
+{
+	this->_attackdamage = 0;
 }
 
 void			ClapTrap::beRepaired(unsigned int amount)

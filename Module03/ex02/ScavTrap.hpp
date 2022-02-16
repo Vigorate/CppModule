@@ -6,9 +6,11 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:23:52 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 14:16:55 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 15:23:29 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#pragma once
 
 #include "ClapTrap.hpp"
 
