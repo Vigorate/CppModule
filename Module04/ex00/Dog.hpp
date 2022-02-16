@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 14:29:08 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 19:44:31 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/16 16:45:24 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/16 21:30:39 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ClapTrap.hpp"
+#include "Animal.hpp"
 
-class FragTrap : public ClapTrap
+class Dog : public Animal
 {
 	public:
-		FragTrap(void);
-		FragTrap(std::string name);
-		FragTrap(std::string, int, int, int);
-		FragTrap(FragTrap const & src);
-		~FragTrap(void);
+		Dog(void);
+		Dog(Dog const & src);
+		~Dog(void);
 
-		void			attack(const std::string &target);
+		Dog&	operator=(Dog const & src);
 
-		FragTrap&		operator=(FragTrap const & src);
+		virtual	void		makeSound(void) const;
 
-		void			highFiveGuys(void);
+		std::string			getType(void) const;
 };
+
+std::ostream    &operator<<(std::ostream &ostream, const Dog &src);

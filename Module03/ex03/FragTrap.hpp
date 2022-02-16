@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 14:29:08 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 16:14:44 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:41:27 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,6 +24,8 @@ class FragTrap : virtual public ClapTrap
 		~FragTrap(void);
 
 		FragTrap&		operator=(FragTrap const & src);
+
+		void			attack(const std::string &target);
 
 		virtual void			setAttackDamage(void);
 		virtual void			setHitPoint(void);

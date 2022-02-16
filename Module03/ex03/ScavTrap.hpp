@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:23:52 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 16:14:40 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:41:09 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,8 @@ class ScavTrap : virtual public ClapTrap
 		virtual void			setAttackDamage(void);
 		virtual void			setHitPoint(void);
 		virtual void			setEnergyPoint(void);
+
+		void			attack(const std::string &target);
 
 		ScavTrap&		operator=(ScavTrap const & src);
 

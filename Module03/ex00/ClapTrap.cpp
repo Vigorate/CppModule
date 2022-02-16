@@ -6,18 +6,27 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:50:30 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/15 17:21:48 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:38:24 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "ClapTrap.hpp"
+
+ClapTrap::ClapTrap(void)
+{
+	this->_name = "Base";
+	this->_hitpoint = 10;
+	this->_energypoint = 10;
+	this->_attackdamage = 0;
+	std::cout << "ClapTrap created by default" << std::endl;	
+}
 
 ClapTrap::ClapTrap(std::string name) : _name(name)
 {
 	this->_hitpoint = 10;
 	this->_energypoint = 10;
 	this->_attackdamage = 0;
-	std::cout << "ClapTrap created" << std::endl;
+	std::cout << "ClapTrap created by name" << std::endl;
 }
 
 ClapTrap::ClapTrap(ClapTrap const & src)
@@ -53,9 +62,9 @@ void			ClapTrap::attack(const std::string &target)
 		std::cout << "ClapTrap " << this->_name << " attacks " << target << " causing " << this->_attackdamage << " points of damage!" << std::endl;
 		this->_energypoint -= 1;
 	}
-	else if (this->_energypoint == 0)
+	else if (this->_energypoint <= 0)
 		std::cout << "ClapTrap " << this->_name << " does not have enough energy points." << std::endl;
-	else if (this->_hitpoint == 0)
+	else if (this->_hitpoint <= 0)
 		std::cout << "ClapTrap " << this->_name << " does not have enough hit points." << std::endl;
 }
 

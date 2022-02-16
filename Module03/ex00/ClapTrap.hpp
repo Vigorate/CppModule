@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 15:50:36 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/15 16:59:22 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:37:54 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@
 class ClapTrap
 {
 	public:
-
+		ClapTrap(void);
 		ClapTrap(std::string name);
 		ClapTrap(ClapTrap const & src);
 		~ClapTrap(void);

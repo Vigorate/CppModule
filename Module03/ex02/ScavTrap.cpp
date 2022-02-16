@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/15 17:23:44 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 14:24:25 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/16 18:38:46 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -52,6 +52,19 @@ std::ostream	&operator<<(std::ostream &ostream, const ScavTrap &src)
 	(void)src;
 	ostream << "ScavTrap";
 	return (ostream);
+}
+
+void			ScavTrap::attack(const std::string &target)
+{
+	if (this->_energypoint > 0 && this->_hitpoint > 0)
+	{
+		std::cout << "ScavTrap " << this->_name << " attacks " << target << " causing " << this->_attackdamage << " points of damage!" << std::endl;
+		this->_energypoint -= 1;
+	}
+	else if (this->_energypoint <= 0)
+		std::cout << "ScavTrap " << this->_name << " does not have enough energy points." << std::endl;
+	else if (this->_hitpoint <= 0)
+		std::cout << "ScavTrap " << this->_name << " does not have enough hit points." << std::endl;
 }
 
 void			ScavTrap::guardGate(void)

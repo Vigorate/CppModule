@@ -1,31 +1,31 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   WrongCat.hpp                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 14:29:08 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 19:44:31 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/16 21:19:42 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/16 21:31:24 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ClapTrap.hpp"
+#include "WrongAnimal.hpp"
 
-class FragTrap : public ClapTrap
+class WrongCat : public WrongAnimal
 {
 	public:
-		FragTrap(void);
-		FragTrap(std::string name);
-		FragTrap(std::string, int, int, int);
-		FragTrap(FragTrap const & src);
-		~FragTrap(void);
+		WrongCat(void);
+		WrongCat(WrongCat const & src);
+		~WrongCat(void);
 
-		void			attack(const std::string &target);
+		WrongCat&     operator=(WrongCat const & src);
 
-		FragTrap&		operator=(FragTrap const & src);
+		virtual void	makeSound(void) const;
 
-		void			highFiveGuys(void);
+		std::string		getType(void) const;
 };
+
+std::ostream    &operator<<(std::ostream &ostream, const WrongCat &src);

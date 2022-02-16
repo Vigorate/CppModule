@@ -1,31 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   FragTrap.hpp                                       :+:      :+:    :+:   */
+/*   Animal.hpp                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 14:29:08 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 19:44:31 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/16 16:47:31 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/16 21:28:10 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "ClapTrap.hpp"
+#include <iostream>
+#include <string>
 
-class FragTrap : public ClapTrap
+class Animal
 {
 	public:
-		FragTrap(void);
-		FragTrap(std::string name);
-		FragTrap(std::string, int, int, int);
-		FragTrap(FragTrap const & src);
-		~FragTrap(void);
+		Animal(void);
+		Animal(Animal const & src);
+		~Animal(void);
 
-		void			attack(const std::string &target);
+		Animal&		operator=(Animal const & src);
 
-		FragTrap&		operator=(FragTrap const & src);
+		virtual void	makeSound(void) const;
 
-		void			highFiveGuys(void);
+		std::string		getType(void) const;
+
+	protected :
+		std::string		_type;
 };
+
+std::ostream    &operator<<(std::ostream &ostream, const Animal &src);
