@@ -1,54 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.cpp                                       :+:      :+:    :+:   */
+/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:18:47 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 21:37:12 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/16 16:47:45 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/16 21:32:50 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongCat.hpp"
 #include "WrongAnimal.hpp"
 
-WrongCat::WrongCat(void)
+WrongAnimal::WrongAnimal(void)
 {
-	this->_type = "WrongCat";
-	std::cout << "WrongCat created" << std::endl;
+	std::cout << "WrongAnimal created" << std::endl;
 }
 
-WrongCat::WrongCat(WrongCat const & src)
+WrongAnimal::WrongAnimal(WrongAnimal const & src)
 {
 	*this = src;
-	std::cout << "WrongCat copied." << std::endl;
+	std::cout << "WrongAnimal copied." << std::endl;
 }
 
-WrongCat::~WrongCat(void)
+WrongAnimal::~WrongAnimal(void)
 {
-	std::cout << "WrongCat destroyed." << std::endl;
+	std::cout << "WrongAnimal destroyed." << std::endl;
 }
 
-WrongCat&  WrongCat::operator=(WrongCat const & src)
+WrongAnimal&  WrongAnimal::operator=(WrongAnimal const & src)
 {
 	this->_type = src.getType();
 	return (*this);
 }
 
-std::ostream    &operator<<(std::ostream &ostream, const WrongCat &src)
+std::ostream    &operator<<(std::ostream &ostream, const WrongAnimal &src)
 {
-	ostream << "WrongCat";
+	ostream << "WrongAnimal";
 	(void)src;
 	return (ostream);
 }
 
-std::string		WrongCat::getType(void) const
+std::string		WrongAnimal::getType(void) const
 {
 	return (this->_type);
 }
 
-void			WrongCat::makeSound(void) const
+void			WrongAnimal::makeSound(void) const
 {
-	std::cout << "Wrong Miaoums." << std::endl;
+	std::cout << "*Some animal noises*" << std::endl;
 }
