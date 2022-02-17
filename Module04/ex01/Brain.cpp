@@ -1,34 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.cpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:20:40 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/17 16:15:18 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/17 14:39:50 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/17 16:56:39 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#pragma once
+#include "Brain.hpp"
 
 #include <iostream>
-#include <string>
 
-class WrongAnimal
+Brain::Brain(void)
 {
-	public:
-		WrongAnimal(void);
-		WrongAnimal(WrongAnimal const & src);
-		virtual ~WrongAnimal(void);
+	std::cout << "Brain created" << std::endl;
+}
 
-		WrongAnimal&		operator=(WrongAnimal const & src);
+Brain::Brain(Brain const & src)
+{
+	*this = src;
+	std::cout << "Brain copied." << std::endl;
+}
 
-		void	makeSound(void) const;
+Brain::~Brain(void)
+{
+	std::cout << "Brain destroyed." << std::endl;
+}
 
-		std::string		getType(void) const;
-	protected :
-		std::string		_type;
-};
-
-std::ostream    &operator<<(std::ostream &ostream, const WrongAnimal &src);
+Brain&  Brain::operator=(Brain const & rhs)
+{
+	if (this == &rhs)
+		return (*this);
+	for (int i = 0; i < 100; ++i)
+		this->ideas[i] = rhs.ideas[i];
+	return (*this);
+}

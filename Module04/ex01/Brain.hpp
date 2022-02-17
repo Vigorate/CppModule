@@ -1,34 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:20:40 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 21:39:36 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/17 14:40:00 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/17 16:45:15 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
 #include <string>
 
-class WrongAnimal
+
+class Brain
 {
 	public:
-		WrongAnimal(void);
-		WrongAnimal(WrongAnimal const & src);
-		virtual ~WrongAnimal(void);
 
-		WrongAnimal&		operator=(WrongAnimal const & src);
+		Brain(void);
+		Brain(Brain const & src);
+		~Brain(void);
 
-		virtual void	makeSound(void) const;
+		Brain&     operator=(Brain const & src);
 
-		std::string		getType(void) const;
-	protected :
-		std::string		_type;
+		std::string		ideas[100];
 };
-
-std::ostream    &operator<<(std::ostream &ostream, const WrongAnimal &src);

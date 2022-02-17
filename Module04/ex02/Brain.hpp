@@ -1,31 +1,29 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongCat.hpp                                       :+:      :+:    :+:   */
+/*   Brain.hpp                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:19:42 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 21:31:24 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/17 14:40:00 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/17 16:45:15 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include "WrongAnimal.hpp"
+#include <string>
 
-class WrongCat : public WrongAnimal
+
+class Brain
 {
 	public:
-		WrongCat(void);
-		WrongCat(WrongCat const & src);
-		~WrongCat(void);
 
-		WrongCat&     operator=(WrongCat const & src);
+		Brain(void);
+		Brain(Brain const & src);
+		~Brain(void);
 
-		virtual void	makeSound(void) const;
+		Brain&     operator=(Brain const & src);
 
-		std::string		getType(void) const;
+		std::string		ideas[100];
 };
-
-std::ostream    &operator<<(std::ostream &ostream, const WrongCat &src);

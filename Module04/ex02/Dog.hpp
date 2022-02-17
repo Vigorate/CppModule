@@ -1,34 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.hpp                                    :+:      :+:    :+:   */
+/*   Dog.hpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/16 21:20:40 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/17 16:15:18 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/16 16:45:24 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/17 18:04:39 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <iostream>
-#include <string>
+#include "AAnimal.hpp"
+#include "Brain.hpp"
 
-class WrongAnimal
+class Dog : public AAnimal
 {
 	public:
-		WrongAnimal(void);
-		WrongAnimal(WrongAnimal const & src);
-		virtual ~WrongAnimal(void);
+		Dog(void);
+		Dog(Dog const & src);
+		virtual ~Dog(void);
 
-		WrongAnimal&		operator=(WrongAnimal const & src);
+		Dog&	operator=(Dog & src);
 
-		void	makeSound(void) const;
+		virtual	void		makeSound(void) const;
 
-		std::string		getType(void) const;
-	protected :
-		std::string		_type;
+		std::string			getType(void) const;
+
+		Brain				*getBrain(void) const;
+
+	private:
+		Brain				*_brain;
 };
-
-std::ostream    &operator<<(std::ostream &ostream, const WrongAnimal &src);

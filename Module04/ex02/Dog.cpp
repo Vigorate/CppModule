@@ -1,41 +1,42 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   Cat.cpp                                            :+:      :+:    :+:   */
+/*   Dog.cpp                                            :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/02/17 16:28:48 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/17 17:57:07 by ambelkac         ###   ########.fr       */
+/*   Created: 2022/02/16 16:45:25 by ambelkac          #+#    #+#             */
+/*   Updated: 2022/02/17 18:04:25 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
-#include "Cat.hpp"
+#include "AAnimal.hpp"
+#include "Dog.hpp"
 #include "Brain.hpp"
 
-Cat::Cat(void)
+Dog::Dog(void)
 {
-	this->_type = "Cat";
+	this->_type = "Dog";
 	this->_brain = new Brain;
-	std::cout << "Cat created" << std::endl;
+	std::cout << "Dog created" << std::endl;
 }
 
-Cat::Cat(Cat const &other)
+Dog::Dog(Dog const &other)
 {
 	this->_type = other._type;
 	this->_brain = new Brain(*other.getBrain());
-	std::cout << "Cat copied constructor." << std::endl;
+	std::cout << "Dog copied constructor." << std::endl;
 }
 
-Cat::~Cat(void)
+Dog::~Dog(void)
 {
 	delete this->_brain;
-	std::cout << "Cat destroyed." << std::endl;
+	std::cout << "Dog destroyed." << std::endl;
 }
 
-Cat&  Cat::operator=(Cat const & rhs)
+Dog&  Dog::operator=(Dog & rhs)
 {
+	std::cout << "Shallow copy operator overload" << std::endl;
 	if (this == &rhs)
 		return (*this);
 	this->_type = rhs.getType();
@@ -43,17 +44,17 @@ Cat&  Cat::operator=(Cat const & rhs)
 	return (*this);
 }
 
-std::string		Cat::getType(void) const
+std::string		Dog::getType(void) const
 {
 	return (this->_type);
 }
 
-void			Cat::makeSound(void) const
+void			Dog::makeSound(void) const
 {
-	std::cout << "Miaoums." << std::endl;
+	std::cout << "Ouafaouf." << std::endl;
 }
 
-Brain			*Cat::getBrain(void) const
+Brain			*Dog::getBrain(void) const
 {
 	return (this->_brain);
 }

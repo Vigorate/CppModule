@@ -6,34 +6,33 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:44:58 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/17 17:06:25 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:11:22 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Dog.hpp"
 #include "Cat.hpp"
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 
 int main()
 {
-	const Animal* i = new Cat();
-	const Animal* j = new Dog();
-	Animal *array_of_animals[2];
+	Cat* i = new Cat();
+	Dog* j = new Dog();
 
-	array_of_animals[0] = new Dog();
-	array_of_animals[1] = new Cat();
+	i->makeSound();
+	j->makeSound();
+
+	i->getBrain()->ideas[0] = "Cat thought.";
+	j->getBrain()->ideas[0] = "Dog thought.";
 	
-	array_of_animals[0]->getBrain()->ideas[0] = "Dog Idea";
-	
-	std::cout << array_of_animals[0]->getBrain()->ideas[0] << std::endl;
+	std::cout << "Cat named i thought : " << i->getBrain()->ideas[0] << std::endl;
+	std::cout << "Dog named j thought : " << j->getBrain()->ideas[0] << std::endl;
 
-	Dog		*Samuel =  new Dog(*(const Dog*)(array_of_animals[0]));
+	Dog *dog_copy = new Dog((const Dog)*j);
 
-	std::cout << Samuel->getBrain()->ideas[0] << std::endl;
+	std::cout << "Dog copy thought : " << dog_copy->getBrain()->ideas[0] << std::endl;
 
-	delete array_of_animals[0];
-	delete array_of_animals[1];
-	delete Samuel;
+	delete dog_copy;
 	delete i;
 	delete j;
 	return 0;

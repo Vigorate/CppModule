@@ -6,11 +6,11 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 16:28:48 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/17 17:57:07 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/17 18:04:49 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "Animal.hpp"
+#include "AAnimal.hpp"
 #include "Cat.hpp"
 #include "Brain.hpp"
 
@@ -34,7 +34,7 @@ Cat::~Cat(void)
 	std::cout << "Cat destroyed." << std::endl;
 }
 
-Cat&  Cat::operator=(Cat const & rhs)
+Cat&  Cat::operator=(Cat & rhs)
 {
 	if (this == &rhs)
 		return (*this);

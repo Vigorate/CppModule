@@ -1,52 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   WrongAnimal.cpp                                    :+:      :+:    :+:   */
+/*   AAnimal.cpp                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/16 16:47:45 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/16 21:32:50 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/17 17:54:41 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "WrongAnimal.hpp"
+#include "AAnimal.hpp"
 
-WrongAnimal::WrongAnimal(void)
+AAnimal::AAnimal(void)
 {
-	std::cout << "WrongAnimal created" << std::endl;
+	std::cout << "AAnimal created" << std::endl;
 }
 
-WrongAnimal::WrongAnimal(WrongAnimal const & src)
+AAnimal::AAnimal(AAnimal const & src)
 {
 	*this = src;
-	std::cout << "WrongAnimal copied." << std::endl;
+	std::cout << "AAnimal copied." << std::endl;
 }
 
-WrongAnimal::~WrongAnimal(void)
+AAnimal::~AAnimal(void)
 {
-	std::cout << "WrongAnimal destroyed." << std::endl;
+	std::cout << "AAnimal destroyed." << std::endl;
 }
 
-WrongAnimal&  WrongAnimal::operator=(WrongAnimal const & src)
+AAnimal&  AAnimal::operator=(AAnimal const & src)
 {
 	this->_type = src.getType();
 	return (*this);
 }
 
-std::ostream    &operator<<(std::ostream &ostream, const WrongAnimal &src)
+std::ostream    &operator<<(std::ostream &ostream, const AAnimal &src)
 {
-	ostream << "WrongAnimal";
+	ostream << "AAnimal";
 	(void)src;
 	return (ostream);
 }
 
-std::string		WrongAnimal::getType(void) const
+std::string		AAnimal::getType(void) const
 {
 	return (this->_type);
 }
 
-void			WrongAnimal::makeSound(void) const
+void			AAnimal::makeSound(void) const
 {
 	std::cout << "*Some animal noises*" << std::endl;
 }
