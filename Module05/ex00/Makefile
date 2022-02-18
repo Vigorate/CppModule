@@ -7,7 +7,7 @@ CC					:= clang
 CXX					:= c++
 ifeq ($(shell uname -s),Darwin)
 	CC				:= gcc
-	CXX				:= c++
+	CXX				:= g++
 endif
 
 #The Target Binary Program
