@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:18:03 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/21 14:41:57 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/21 14:59:17 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,17 +58,10 @@ int				Form::getSignGrade(void) const { return this->_signGrade; }
 
 void			Form::beSigned(Bureaucrat &user)
 {
-	if (this->_signed == true)
-		throw Form::AlreadySignedException();
-	else if (user.getGrade() > this->getSignGrade())
+	if (user.getGrade() > this->getSignGrade())
 		throw Form::GradeTooLowException();
 	std::cout << user.getName() << " signed " << this->_name << std::endl;
 	this->_signed = true;
-}
-
-const char		*Form::AlreadySignedException::what() const throw()
-{
-	return ("Form already signed.");
 }
 
 const char		*Form::GradeTooHighException::what() const throw()

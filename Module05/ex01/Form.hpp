@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:17:49 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/21 14:39:15 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/21 14:59:23 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -40,10 +40,6 @@ class Form
 			virtual const char *what() const throw();
 		};
 		class GradeTooLowException : public std::exception
-		{
-			virtual const char *what() const throw();
-		};
-		class AlreadySignedException : public std::exception
 		{
 			virtual const char *what() const throw();
 		};
