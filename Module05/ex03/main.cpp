@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
+/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 20:00:58 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/22 16:35:57 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/23 00:56:39 by amine            ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,11 +25,10 @@ int		main(void)
 	ShrubberyCreationForm		*Third;
 
 	Second = First.makeForm("Unkown", "Random");
-	std::cout << "here" << std::endl;
-	Third = (ShrubberyCreationForm *)First.makeForm("schrubbery creation", "Garden");
+	Third = (ShrubberyCreationForm *)First.makeForm("shrubbery creation", "Garden");
 	Bu.signForm(*Third);
 	Bu.executeForm(*Third);
-	
+
 	delete Third;
 	return (0);
 }
