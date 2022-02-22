@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/18 19:18:03 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/21 18:33:50 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/22 15:40:48 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,20 +34,17 @@ Form::Form(std::string name, int execGrade, int signGrade, std::string target) :
 
 Form::Form(Form const & src) : 
 	_name(src.getName()),
+	_signed(false),
 	_execGrade(src.getExecGrade()),
-	_signGrade(src.getSignGrade()),
-	_signed(false) {}
+	_signGrade(src.getSignGrade()) {}
 
-Form::~Form(void)
-{
-
-}
+Form::~Form(void) {}
 
 void			Form::execute(Bureaucrat const &executor) const
 {
 	if (this->_signed == false)
 		throw NotSigned();
-	if (executor.getGrade() < this->_execGrade)
+	if (executor.getGrade() > this->_execGrade)
 		throw GradeTooLowException();
 }
 
@@ -78,9 +75,9 @@ void			Form::beSigned(Bureaucrat &user)
 	this->_signed = true;
 }
 
-const char		*Form::GradeTooHighException::what() const throw()
+const char		*Form::NotSigned::what() const throw()
 {
-	return ("Form has not been signed for execution.");
+	return ("Form has not been signed to be executed.");
 }
 
 const char		*Form::GradeTooHighException::what() const throw()

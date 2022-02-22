@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/21 15:05:58 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/21 17:02:30 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/22 15:37:10 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -19,3 +19,15 @@ RobotomyRequestForm::RobotomyRequestForm(std::string target) : Form("RobotomyReq
 RobotomyRequestForm::RobotomyRequestForm(RobotomyRequestForm const & src) : Form(src) {}
 
 RobotomyRequestForm::~RobotomyRequestForm(void) {}
+
+void			RobotomyRequestForm::execute(Bureaucrat const &executor) const
+{
+	Form::execute(executor);
+	std::cout << executor.getName() << " executed " << this->getName() << std::endl;
+	std::srand(std::time(NULL));
+	if (std::rand() % 2)
+		std::cout << executor.getName() << " has been robotomized." << std::endl;
+	else
+		std::cout << executor.getName() << " robotomization has failed." << std::endl;
+		
+}

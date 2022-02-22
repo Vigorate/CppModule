@@ -6,7 +6,7 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/17 20:01:23 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/21 14:39:05 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/22 15:25:23 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -35,6 +35,8 @@ class Bureaucrat
 		void				decrementGrade(void);
 
 		void				signForm(Form &);
+
+		void				executeForm(const Form &) const;
 
 		class GradeTooHighException : public std::exception
 		{
