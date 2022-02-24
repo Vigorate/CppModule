@@ -3,14 +3,15 @@
 /*                                                        :::      ::::::::   */
 /*   Conversion.cpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:47:42 by amine             #+#    #+#             */
-/*   Updated: 2022/02/23 17:54:55 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/24 14:20:44 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "Conversion.hpp"
+
 
 Conversion::Conversion(void) : _value(0.) {}
 
@@ -19,7 +20,10 @@ Conversion::Conversion(std::string const &arg)
 	_value = std::stod(arg);
 }
 
-Conversion::Conversion(Conversion const & src) { *this = src; }
+Conversion::Conversion(Conversion const & src)
+{
+	_value = src._value;
+}
 
 Conversion::~Conversion(void) {}
 
@@ -77,7 +81,7 @@ void		Conversion::displayType(void) const
 
 const char		*Conversion::UndisplayableConversion::what() const throw()
 {
-	return ("non displayable");
+	return ("Non displayable");
 }
 
 const char		*Conversion::ImpossibleConversion::what() const throw()

@@ -3,20 +3,22 @@
 /*                                                        :::      ::::::::   */
 /*   Conversion.hpp                                     :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 16:47:46 by amine             #+#    #+#             */
-/*   Updated: 2022/02/23 18:10:49 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/24 14:19:01 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <string>
 #include <iostream>
 #include <cmath>
+#include <cstdlib>
 #include <cctype>
 #include <iomanip>
+#include <climits>
+#include <string>
 
 class Conversion
 {
@@ -27,7 +29,7 @@ class Conversion
 		Conversion(Conversion const & src);
 		~Conversion(void);
 
-		char		getChar(void) const;
+		char	getChar(void) const;
 		int		getInt(void) const;
 		double	getDouble(void) const;
 		float	getFloat(void) const;

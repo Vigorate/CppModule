@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   Data.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 17:57:16 by amine             #+#    #+#             */
-/*   Updated: 2022/02/23 18:17:45 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/24 14:25:30 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -28,7 +28,8 @@ Data&  Data::operator=(Data const & src)
 {
 	if (this == &src)
 		return *this;
-	
+
 	_n = src._n;
+	_s = src._s;
 	return (*this);
 }

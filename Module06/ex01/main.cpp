@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.cpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 17:57:45 by amine             #+#    #+#             */
-/*   Updated: 2022/02/23 18:18:16 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/24 14:24:31 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,8 +33,9 @@ int main(void)
 
 	std::cout << "Re Serialize    : " << serialize(deserialize(tmp)) << std::endl;
 	std::cout << "Re DeSerialize  : " << deserialize(serialize(deserialize(tmp))) << std::endl << std::endl;
-	std::cout << "Get string	  : " << deserialize(serialize(deserialize(tmp)))->getString() << std::endl << std::endl;
+	std::cout << "Get string      : " << deserialize(serialize(deserialize(tmp)))->getString() << std::endl << std::endl;
 
-	std::cout << "Serialize???    : " << deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(tmp))))))))))))))))))))))))) << std::endl;
+	std::cout << "Deserialize     : " << deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(tmp))))))))))))))))))))))))) << std::endl;
+	std::cout << "Get number      : " << deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(serialize(deserialize(tmp)))))))))))))))))))))))))->getInt() << std::endl;
 	return (0);
 }

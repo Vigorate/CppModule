@@ -3,17 +3,17 @@
 /*                                                        :::      ::::::::   */
 /*   Data.hpp                                           :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: amine <amine@student.42.fr>                +#+  +:+       +#+        */
+/*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/23 17:57:06 by amine             #+#    #+#             */
-/*   Updated: 2022/02/23 18:17:32 by amine            ###   ########.fr       */
+/*   Updated: 2022/02/24 14:23:41 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #pragma once
 
-#include <cstdint>
 #include <iostream>
+#include <stdint.h>
 
 class Data
 {
@@ -27,7 +27,7 @@ class Data
 		int				getInt(void) const;
 		std::string		getString(void) const;
 
-		Data&     operator=(Data const & src);
+		Data&			operator=(Data const & src);
 
 	private :
 		int				_n;
