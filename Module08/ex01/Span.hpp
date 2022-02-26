@@ -6,17 +6,25 @@
 /*   By: ambelkac <ambelkac@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/02/25 18:27:24 by ambelkac          #+#    #+#             */
-/*   Updated: 2022/02/25 19:38:12 by ambelkac         ###   ########.fr       */
+/*   Updated: 2022/02/26 16:46:18 by ambelkac         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <list>
+#include <vector>
+#include <algorithm>
+#include <limits>
+#include <climits>
+#include <iostream>
+#include <iterator>
+#include <numeric>
 
 class Span
 {
 	public:
 
+		Span(void);
 		Span(int);
+		Span(const int &, const int &);
 		Span(Span const & src);
 		~Span(void);
 
@@ -24,8 +32,8 @@ class Span
 
 		void	addNumber(int const &);
 
-		int		shortestSpan(void) const;
-		int		longestSpan(void) const;
+		int		shortestSpan(void);
+		int		longestSpan(void);
 
 		class	Spantoosmall : std::exception
 		{
@@ -38,6 +46,6 @@ class Span
 
 	private :
 		unsigned int		_size;
-		std::list<int>		_list;
+		std::vector<int>	_vector;
 };
 
